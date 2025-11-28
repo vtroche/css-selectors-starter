@@ -136,7 +136,7 @@ h1{
     select both the h1 and h2 tags on the page by tag name
 */
 /* ----- */
-h1,h2{
+h1,h2,h3{
     grid-column: 1/-1;
     text-align: center;
     font-weight: bold;
@@ -839,7 +839,7 @@ input[type="submit"]:focus{
     select the second div in the border styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#borders > div:nth-of-type(2){
+#borders > div > div:nth-of-type(1){
     width: 250px;
     height: 250px;
     border: 6px dotted var(--dv-orange);
@@ -851,7 +851,7 @@ input[type="submit"]:focus{
     select the third div in the border styling section using the ID, descendant, and class name selectors
 */
 /* ----- */
-#border > div .dashed{
+#borders > div .dashed{
     width: 200px;
     height: 200px;
     border: 6px dashed var(--dv-yellow);
@@ -863,7 +863,7 @@ input[type="submit"]:focus{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#border div:nth-of-type(4){
+#borders > div .dashed > div :last-child{
     width: 150px;
     height: 150px;
     border: 6px double var(--dv-mint);
@@ -875,7 +875,7 @@ input[type="submit"]:focus{
     select the last div in the more styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#border > div:nth-last-of-type{
+#borders > div .dashed > div:last-of-type{
     width: 100px;
     height: 100px;
     border: 6px inset var(--dv-lt-blue);
@@ -900,7 +900,7 @@ input[type="submit"]:focus{
     select the div in the pseudo-elements section using the ID, child/descendant, and tag name selectors
 */
 /* ----- */
-#pseudo-els div{
+#pseudo-els > div{
     width: 275px;
     height: 275px;
     margin: 56px auto 32px;
@@ -915,7 +915,7 @@ input[type="submit"]:focus{
     select the div's before element in the pseudo-elements section using the ID, child/descendant, pseudo-element, and tag name selectors
 */
 /* ----- */
-#pseudo-els > div:first-of-type{
+#pseudo-els div::before{
     content: "\2730";
     padding: 12px 24px;
     border-radius: 50%;
