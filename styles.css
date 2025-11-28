@@ -863,7 +863,7 @@ input[type="submit"]:focus{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#borders > div .dashed > div :last-child{
+#borders > div .dashed > div :nth-child(1){
     width: 150px;
     height: 150px;
     border: 6px double var(--dv-mint);
